@@ -1,0 +1,304 @@
+:root {
+  --bg: #0b1020;
+  --card: #121a2a;
+  --muted: #a7b1c2;
+  --text: #f2f5fb;
+  --accent: #4f8cff;
+  --accent-2: #7cd992;
+}
+.container-fluid:not(.dark) {
+  --bg: #ffffff;
+  --card: #f8fafc;
+  --muted: #64748b;
+  --text: #0f172a;
+  --accent: #3b82f6;
+  --accent-2: #10b981;
+}
+.container-fluid:not(.dark) {
+  background: var(--bg);
+  color: var(--text);
+}
+.container-fluid:not(.dark) .btn {
+  background: #f1f5f9;
+  color: var(--text);
+  border-color: #e2e8f0;
+}
+.container-fluid:not(.dark) .dow {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  color: var(--muted);
+}
+.container-fluid:not(.dark) .cell {
+  border-color: #e2e8f0;
+  color: var(--text);
+}
+.container-fluid:not(.dark) .outside {
+  background: #f8fafc;
+  color: var(--muted);
+}
+.container-fluid:not(.dark) .event {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: var(--text);
+}
+.container-fluid:not(.dark) .event .meta {
+  color: var(--muted);
+}
+.container-fluid:not(.dark) .chip {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: var(--text);
+}
+.container-fluid:not(.dark) .input {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: var(--text);
+}
+.container-fluid:not(.dark) .table th {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  color: var(--muted);
+}
+.container-fluid:not(.dark) .table td {
+  border-color: #e2e8f0;
+  color: var(--text);
+}
+.container-fluid:not(.dark) .grid {
+  border-color: #e2e8f0;
+}
+.container-fluid:not(.dark) .modal {
+  border-color: #e2e8f0;
+  color: var(--text);
+}
+.container-fluid:not(.dark) .date-badge {
+  color: var(--muted);
+}
+.container-fluid:not(.dark) h1,
+.container-fluid:not(.dark) h2,
+.container-fluid:not(.dark) h3 {
+  color: var(--text);
+}
+.container-fluid:not(.dark) p {
+  color: var(--text);
+}
+.container-fluid:not(.dark) a {
+  color: var(--accent);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+}
+.container-fluid {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.container-fluid {
+  /* max-width: 1100px; */
+  margin: 0 auto;
+  /* padding: 24px; */
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.nav {
+  display: flex;
+  gap: 12px;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  margin: 12px 0 20px;
+}
+.btn:not(.btn-primary):not(.btn-secondary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info):not(.btn-light):not(.btn-dark) {
+  /* background: #1e293b; */
+  color: var(--text);
+  border: 1px solid #334155;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn.primary:not(.btn-primary):not(.btn-secondary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info):not(.btn-light):not(.btn-dark) {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+.grid {
+  background: var(--card);
+  border: 1px solid #26324a;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #26324a;
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.dow {
+  background: #0e1729;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--muted);
+  border-bottom: 1px solid #26324a;
+}
+.cell {
+  min-height: 120px;
+  padding: 8px;
+  border-right: 1px solid #26324a;
+  border-bottom: 1px solid #26324a;
+  position: relative;
+}
+.cell:nth-child(7n) {
+  border-right: none;
+}
+.date-badge {
+  font-size: 12px;
+  color: var(--muted);
+}
+.outside {
+  background: #0b1323;
+  color: #6b7280;
+}
+.selected {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+.event {
+  margin-top: 6px;
+  padding: 6px;
+  border-radius: 8px;
+  background: #1f2536;
+  border: 1px solid #31405d;
+  font-size: 12px;
+}
+.event .title {
+  font-weight: 600;
+}
+.event .meta {
+  color: var(--muted);
+  font-size: 11px;
+}
+.flex {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.right {
+  margin-left: auto;
+}
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.chip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+.toolbar {
+  display: flex;
+  gap: 8px;
+}
+.input {
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid #26324a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.table th,
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #26324a;
+  text-align: left;
+}
+.table th {
+  background: #0e1729;
+  color: var(--muted);
+  font-weight: 600;
+}
+.tag {
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  border: 1px solid #334155;
+}
+.tag.present {
+  background: rgba(124, 217, 146, 0.15);
+}
+.tag.absent {
+  background: rgba(255, 114, 114, 0.15);
+}
+.tag.late {
+  background: rgba(255, 214, 102, 0.15);
+}
+.modal-content {
+  background: var(--card) !important;
+  color: var(--text) !important;
+  border: 1px solid #26324a !important;
+}
+.container-fluid:not(.dark) .modal-content {
+  background: var(--card) !important;
+  color: var(--text) !important;
+  border: 1px solid #e2e8f0 !important;
+}
+.btn-close {
+  filter: invert(1);
+}
+.container-fluid:not(.dark) .btn-close {
+  filter: invert(0);
+}
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--muted);
+  color: var(--text);
+  /* padding: 8px 12px; */
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+.theme-toggle:hover {
+  background: var(--card);
+  border-color: var(--accent);
+}
+.header {
+  position: relative;
+}
+.header .theme-toggle {
+  position: absolute;
+  right: 205px;
+  top: 50%;
+  transform: translateY(-50%);
+}
