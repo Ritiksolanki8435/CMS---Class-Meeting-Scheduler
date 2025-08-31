@@ -24,7 +24,7 @@ export default function App() {
         <ThemeToggle />
       </header>
 
-      <div className="d-flex align-items-center gap-3 mb-3">
+      <div className="d-flex align-items-center gap-3 mb-3 mx-2">
         <FilterBar />
         <button className="btn btn-primary" onClick={() => dispatch(scheduleMeetings())}>
           Schedule Meetings

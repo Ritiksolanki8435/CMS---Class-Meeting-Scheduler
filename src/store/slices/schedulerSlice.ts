@@ -3,11 +3,9 @@ import { createAsyncThunk, createSlice, PayloadAction, nanoid } from '@reduxjs/t
 import type { AttendanceStatus, EventItem, Student } from '../../types'
 import { buildSchedule } from '../../utils/scheduler'
 
-// Async: simulate API fetch for students
 export const loadStudents = createAsyncThunk<Student[]>('scheduler/loadStudents', async () => {
   const res = await fetch('/students.json')
   const data = (await res.json()) as Student[]
-  // mimic network
   await new Promise(r => setTimeout(r, 200))
   return data
 })

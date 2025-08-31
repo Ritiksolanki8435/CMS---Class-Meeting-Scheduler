@@ -123,10 +123,8 @@ a {
   margin: 12px 0 20px;
 }
 .btn:not(.btn-primary):not(.btn-secondary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info):not(.btn-light):not(.btn-dark) {
-  /* background: #1e293b; */
   color: var(--text);
   border: 1px solid #334155;
-  padding: 10px 14px;
   border-radius: 10px;
   cursor: pointer;
 }

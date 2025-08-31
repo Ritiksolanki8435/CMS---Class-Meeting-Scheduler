@@ -41,12 +41,9 @@ export function buildSchedule(
   // Normalize: YYYY-MM-DD sorted
   const dates = [...selectedDates].sort()
 
-  // Expand students into individual meeting slots and sort by age desc (older first)
+  // Create one meeting slot per student and sort by age desc (older first)
   type Slot = { student: Student }
-  const slots: Slot[] = []
-  for (const s of students) {
-    for (let i = 0; i < s.meetings; i++) slots.push({ student: s })
-  }
+  const slots: Slot[] = students.map(s => ({ student: s }))
   slots.sort((a, b) => b.student.age - a.student.age)
 
   const eventsByDate: Record<string, EventItem[]> = {}

@@ -37,7 +37,7 @@ export default function Overview() {
   }, [eventsByDate, classes])
 
   return (
-    <div className={`container-fluid ${isDarkMode ? 'dark' : ''}`}>
+    <div className={`p-0 container-fluid ${isDarkMode ? 'dark' : ''}`}>
       <header className="header bg-primary text-white p-3 mb-3">
         <h4 className="mb-0">Overview</h4>
         <nav className="nav">
@@ -46,7 +46,7 @@ export default function Overview() {
         <ThemeToggle />
       </header>
 
-      <div className="d-flex justify-content-end mb-3">
+      <div className="d-flex justify-content-end mb-3 mx-3">
         <button className="btn btn-success" onClick={() => exportWorkbook(eventsByDate)} disabled={Object.keys(eventsByDate).length === 0}>Export to Excel</button>
       </div>
 

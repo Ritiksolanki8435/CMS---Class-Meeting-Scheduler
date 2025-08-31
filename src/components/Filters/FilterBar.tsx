@@ -10,7 +10,7 @@ export default function FilterBar() {
     <div className="d-flex gap-2">
       <input
         className="form-control"
-        placeholder="Filter by class name (e.g. Math, Science)…"
+        placeholder="Filter by class name"
         value={filters.className}
         onChange={(e) => dispatch(setFilterClass(e.target.value))}
       />

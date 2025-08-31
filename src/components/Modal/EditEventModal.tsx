@@ -19,7 +19,7 @@ export default function EditEventModal({ event, onClose }: { event: EventItem, o
   }
 
   return (
-    <div className="modal-backdrop d-flex align-items-center justify-content-center" onClick={onClose} style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 1050}}>
+    <div className="modal-backdrop d-flex align-items-center justify-content-center" onClick={(e) => { e.stopPropagation(); e.preventDefault(); onClose(); }} style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 1050}}>
       <div className="modal-dialog" onClick={e => e.stopPropagation()} style={{maxWidth: '500px', margin: '1.75rem auto'}}>
         <div className="modal-content" style={{background: 'var(--card)', color: 'var(--text)', border: '1px solid var(--muted)', borderRadius: '0.375rem', boxShadow: '0 0.5rem 1rem rgba(0, 0, 0, 0.15)'}}>
           <div className="modal-header" style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem', borderBottom: '1px solid var(--muted)'}}>
