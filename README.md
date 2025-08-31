@@ -1,66 +1,57 @@
 
-# Class Meeting Scheduler (Frontend)
+# Class Meeting Scheduler
 
-A React + TypeScript implementation of the **Dynamic Class Meeting Scheduler** with:
+A web application for scheduling and managing class meetings with an interactive calendar interface. Built with React and TypeScript.
 
-- Visual calendar with multi-date selection
-- Age-priority + balanced class distribution auto-scheduling
-- Editable events + attendance status
-- Overview page with class-wise counts and daily Present/Absent/Late
-- Excel export (Overview + per-date sheets) using **SheetJS (xlsx)**
+## Features
 
-## Stack
-- React 18 + Vite + TypeScript
-- Redux Toolkit for state
-- date-fns for calendar math
-- xlsx for Excel export
+- Interactive calendar with date selection
+- Student meeting scheduling with age-based priority
+- Real-time filtering by class or student name
+- Meeting attendance tracking
+- Excel export functionality
+- Responsive design with dark/light theme
 
 ## Getting Started
+
+### Prerequisites
+
+Make sure you have Node.js installed on your machine.
+
+### Installation
+
+1. Clone the repository
 ```bash
-pnpm i   # or npm i / yarn
-pnpm dev # npm run dev / yarn dev
+git clone https://github.com/Ritiksolanki8435/CMS---Class-Meeting-Scheduler
+cd class-meeting-scheduler
 ```
 
-Open http://localhost:5173
-
-## How it works
-- Pick dates in the Calendar view (click to toggle). Navigate months with ◀/▶.
-- Optionally apply filters (class or student) to limit which students are scheduled.
-- Click **Schedule Meetings** to auto-allocate meetings across selected dates:
-  - **Older students first** (age desc)
-  - **Balanced per-class distribution** across dates with fair tie-breakers
-- Click an event to edit its **attendance** or delete it.
-- Go to **Overview** to view class-wise per-day counts and **Export to Excel**.
-
-## Folder Structure
-```text
-src/
-  components/
-    Calendar/
-      Calendar.tsx
-      DayCell.tsx
-    Filters/
-      FilterBar.tsx
-    Modal/
-      EditEventModal.tsx
-    Overview/
-      Overview.tsx
-  data/
-    students.json
-  store/
-    index.ts
-    slices/
-      schedulerSlice.ts
-  utils/
-    scheduler.ts    # scheduling algorithm
-    excel.ts        # Excel export helpers
-  App.tsx
-  main.tsx
-  styles.css
-  types.ts
+2. Install dependencies
+```bash
+npm install
 ```
 
-## Notes
-- Dummy data is served from `src/data/students.json`. Replace with a real API when available.
-- Excel contains an **Overview** sheet and a sheet **per date** with detailed rows.
-- The UI is responsive and intentionally minimal.
+3. Start the development server
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Usage
+
+1. Select dates on the calendar by clicking on them
+2. Use filters to narrow down students by class or name
+3. Click "Schedule Meetings" to automatically assign meetings
+4. Click on any scheduled meeting to edit attendance or delete
+5. View the Overview page for summary statistics
+6. Export data to Excel for external use
+
+## Tech Stack
+
+- React 18 with TypeScript
+- Vite for build tooling
+- Redux Toolkit for state management
+- Bootstrap for styling
+- date-fns for date utilities
+- SheetJS for Excel export

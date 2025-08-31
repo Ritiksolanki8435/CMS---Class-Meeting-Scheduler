@@ -11,7 +11,6 @@ export default function Calendar() {
   const end = endOfWeek(endOfMonth(monthCursor), { weekStartsOn: 1 })
   const days = eachDayOfInterval({ start, end })
   
-  // Filter events based on current filter criteria
   const filterEvents = (events: any[]) => {
     return events.filter(event => {
       const classOk = !filters.className || event.class_name.toLowerCase().includes(filters.className.toLowerCase())

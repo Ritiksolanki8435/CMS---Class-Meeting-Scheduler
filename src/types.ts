@@ -11,7 +11,7 @@ export interface Student {
 
 export interface EventItem {
   id: string
-  date: string // ISO yyyy-MM-dd
+  date: string 
   student_name: string
   class_name: string
   age: number

@@ -1,5 +1,3 @@
-
-import React from 'react'
 import { useAppDispatch, useAppSelector } from '../../store'
 import { setFilterClass, setFilterStudent } from '../../store/slices/schedulerSlice'
 
